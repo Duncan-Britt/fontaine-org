@@ -5,7 +5,7 @@
 ;; Author: Duncan Britt
 ;; Contact: https://github.com/Duncan-Britt/fontaine-org/issues
 ;; Homepage: https://github.com/Duncan-Britt/fontaine-org
-;; Keywords: Graphics,images,themes,fonts
+;; Keywords: faces
 
 ;; Package-Version: 0.0.1
 ;; Package-Requires: ((emacs "29"))
@@ -26,8 +26,40 @@
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-
-;;;
+;; ┌─────────┐
+;; │ Summary │
+;; └─────────┘
+;; Extends `fontaine' to make keywords available within
+;; `fontaine-presets' for setting custom font families for Org mode
+;; headings.
+;; ┌─────────────┐
+;; │ Example use │
+;; └─────────────┘
+;; (setq fontaine-presets
+;;       `((Adelle-regular
+;;            :default-height 130
+;;            :default-family "Iosevka"
+;;            :fixed-pitch-family "Iosevka"
+;;            :fixed-pitch-height 1.0
+;;            :org-level-1-family "Symbola" ;; ┐
+;;            :org-level-2-family "Symbola" ;; │
+;;            :org-level-3-family "Symbola" ;; │
+;;            :org-level-4-family "Symbola" ;; │ <-- Requires `fontaine-org'.
+;;            :org-level-5-family "Symbola" ;; │
+;;            :org-level-6-family "Symbola" ;; │
+;;            :org-level-7-family "Symbola" ;; │
+;;            :org-level-8-family "Symbola" ;; ┘
+;;            :variable-pitch-family  "Adelle"
+;;            :variable-pitch-height 1.0)))
+;;
+;; ┌─────────┐
+;; │ Install │
+;; └─────────┘
+;; (use-package
+;;   :ensure (:host github :repo "Duncan-Britt/fontaine-org")
+;;   :after fontaine
+;;   :config
+;;   (fontaine-org-mode 1))
 
 ;;; Code:
 (require 'fontaine)
