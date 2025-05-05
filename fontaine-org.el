@@ -2,19 +2,28 @@
 
 ;; Copyright (C) 2024 Duncan Britt
 
-;; Author: Duncan Britt <dbru997@gmail.com>
+;; Author: Duncan Britt
+;; Contact: https://github.com/Duncan-Britt/fontaine-org/issues
 ;; Homepage: https://github.com/Duncan-Britt/fontaine-org
-;; Keywords: Graphics,images,themes
+;; Keywords: Graphics,images,themes,fonts
 
 ;; Package-Version: 0.0.1
 ;; Package-Requires: ((emacs "29"))
 
-;; The software is provided “as is”, without warranty of any kind, express or implied,
-;; including but not limited to the warranties of merchantability, fitness for a particular
-;; purpose and noninfringement. in no event shall the authors or copyright holders be liable
-;; for any claim, damages or other liability, whether in an action of contract, tort or
-;; otherwise, arising from, out of or in connection with the software or the use or other
-;; dealings in the software.
+;; This file is NOT part of GNU Emacs.
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
@@ -63,7 +72,7 @@
              (slant (plist-get props slant-prop))
              (height (plist-get props height-prop))
              (width (plist-get props width-prop))
-             (face-spec (fontaine-org--get-face-spec 
+             (face-spec (fontaine-org--get-face-spec
                          face family weight slant height width)))
         (when face-spec
           (push face-spec faces))))
